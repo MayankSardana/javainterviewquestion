@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Interview Masterclass PDF</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #111;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #222;
+      border-left: 4px solid #4caf50;
+      padding-left: 8px;
+    }
+
+    .course-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .price {
+      text-align: center;
+      font-size: 22px;
+      margin: 20px 0;
+    }
+
+    .price del {
+      color: #888;
+      margin-right: 10px;
+    }
+
+    .price span {
+      background: #4caf50;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .features {
+      margin: 20px 0;
+      padding: 15px 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+    }
+
+    .features li {
+      margin: 10px 0;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+    }
+
+    .features li::before {
+      content: "✔️";
+      margin-right: 8px;
+      color: green;
+    }
+
+    .disclaimer {
+      border: 2px solid #ff4d4d;
+      padding: 14px;
+      border-radius: 10px;
+      background: #fff2f2;
+      margin-top: 25px;
+      font-weight: bold;
+      color: #b30000;
+      text-align: center;
+    }
+
+    .proof-section {
+      margin-top: 35px;
+      text-align: center;
+      padding: 20px;
+      background: #f0f4ff;
+      border-radius: 12px;
+    }
+
+    .proof-section h3 {
+      border: none;
+      color: #1a237e;
+    }
+
+    .proof-section video {
+      border: 2px solid #ddd;
+      border-radius: 12px;
+      max-width: 100%;
+      margin-top: 15px;
+    }
+
+    .course-link {
+      margin-top: 20px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .course-link img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .course-link a {
+      color: #1565c0;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .course-link a:hover {
+      text-decoration: underline;
+    }
+
+    .buy-section {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background: #e8f5e9;
+      border-radius: 12px;
+    }
+
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-bottom: 15px;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #43a047, #2e7d32);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    /* Floating Buy Button with Glow */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #ff9800, #e65100);
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      z-index: 999;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(255, 152, 0, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
+      }
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.07);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="photo.png" alt="Course Preview" class="course-img">
+
+    <h1>Java Interview Masterclass: Top 350 Questions (PDF)</h1>
+    <p style="text-align:center; font-size:16px;">
+      <b>Topics:</b> Java Coding, OOPS, Exception Handling, Collections, Multithreading, Generics, Spring Boot, MVC, REST Services
+    </p>
+
+    <div class="price">
+      <del>₹799</del> <span>Now ₹222 Only</span>
+    </div>
+
+    <h3>What you'll get:</h3>
+    <ul class="features">
+      <li><b>PDF Only</b> — 350 Java Interview Questions and Answers</li>
+      <li>Covers Core Java, OOPS, Exception Handling, Collections, Generics</li>
+      <li>Advanced topics: Spring Boot, MVC, REST WebServices</li>
+      <li>Perfect for interview preparation</li>
+    </ul>
+
+    <div class="disclaimer">
+      ⚠️ Note: This is <u>only the PDF material</u>.  
+      It does not include Udemy video lectures or full course access.
+    </div>
+
+    <div class="proof-section">
+      <h3>Proof that I have the PDF 📂</h3>
+      <video width="100%" controls>
+        <source src="Video.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>(Video proof showing the PDF file on my computer)</p>
+
+      <div class="course-link">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Udemy_logo.svg" alt="Udemy Logo">
+        <a href="https://www.udemy.com/course/top-250-java-interview-questions/" target="_blank">
+          Official Udemy Course Link
+        </a>
+      </div>
+    </div>
+
+    <div class="buy-section">
+      <p id="countdown" class="countdown">⏰ Limited Offer Ends Soon...</p>
+      <p style="font-size:17px;">To buy, contact me on <b>Telegram</b> and pay via UPI</p>
+      <a class="buy-btn" id="buyBtn" href="https://t.me/Mayank_Sardana" target="_blank">🔥 Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Floating Buy Button -->
+  <a class="floating-btn" id="floatingBtn" href="https://t.me/Mayank_Sardana" target="_blank">⚡ Buy Now</a>
+
+  <script>
+    // Countdown Timer Script
+    var countDownDate = new Date("Sep 20, 2025 23:59:59").getTime(); // Offer expiry date
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "❌ Offer Expired!";
+        
+        // Disable Buy Buttons
+        let buyBtn = document.getElementById("buyBtn");
+        let floatingBtn = document.getElementById("floatingBtn");
+
+        buyBtn.innerHTML = "❌ Offer Closed";
+        buyBtn.style.background = "#999";
+        buyBtn.style.cursor = "not-allowed";
+        buyBtn.removeAttribute("href");
+
+        floatingBtn.innerHTML = "❌ Offer Closed";
+        floatingBtn.style.background = "#999";
+        floatingBtn.style.cursor = "not-allowed";
+        floatingBtn.removeAttribute("href");
+        floatingBtn.style.animation = "none"; // stop glow
+      } else {
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+          "⏰ Ends in " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
